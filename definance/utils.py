@@ -1,8 +1,8 @@
 
 import requests
 
-from classes import Exchange
-from symbols import get_binance_pairs, get_bitget_pairs
+from .classes import Exchange
+from .symbols import get_binance_pairs, get_bitget_pairs
 
 
 def fetch_api_data(api_link: str):    

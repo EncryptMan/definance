@@ -1,7 +1,7 @@
-import exceptions
-from classes import Exchange, PriceData
-from exchange import fetch_binance_price_data, fetch_bitget_price_data, fetch_okx_price_data
-from symbols import update_symbols, get_binance_coins, get_binance_pairs, get_bitget_coins, \
+from . import exceptions
+from .classes import Exchange, PriceData
+from .exchange import fetch_binance_price_data, fetch_bitget_price_data, fetch_okx_price_data
+from .symbols import update_symbols, get_binance_coins, get_binance_pairs, get_bitget_coins, \
       get_bitget_pairs, get_okx_coins, get_okx_pairs, get_all_coins, get_all_pairs
 
 

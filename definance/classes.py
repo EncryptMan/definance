@@ -1,6 +1,4 @@
 from enum import Enum
-from utils import format_price, break_full_symbol
-
 
 class Exchange(Enum):
     '''
@@ -55,6 +53,8 @@ class PriceData:
         self.api_url = str(api_url)
         self.exchange = exchange
 
+        from .utils import format_price, break_full_symbol
+        
         self.base_asset, self.quote_asset = break_full_symbol(
             self.symbol, self.exchange)
 

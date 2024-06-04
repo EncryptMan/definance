@@ -2,7 +2,7 @@ import requests
 from typing import Set, List
 import logging
 
-from url import get_binance_info_url, get_okx_info_url, get_bitget_info_url
+from .url import get_binance_info_url, get_okx_info_url, get_bitget_info_url
 
 
 # Example {'BTC', 'ETH', 'BNB'}

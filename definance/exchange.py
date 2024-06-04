@@ -1,11 +1,11 @@
 from typing import Callable
 
-from utils import fetch_api_data, clean_symbol
-from exceptions import SymbolNotFound
-from url import *
-from symbols import get_binance_pairs, get_bitget_pairs, get_okx_pairs, get_binance_coins, get_bitget_coins, get_okx_coins
-from symbols import find_pair_with_base_coin, search_symbol
-from classes import PriceData, Exchange
+from .utils import fetch_api_data, clean_symbol
+from .exceptions import SymbolNotFound
+from .url import *
+from .symbols import get_binance_pairs, get_bitget_pairs, get_okx_pairs, get_binance_coins, get_bitget_coins, get_okx_coins
+from .symbols import find_pair_with_base_coin, search_symbol
+from .classes import PriceData, Exchange
 
 
 def fetch_binance_price_data(symbol: str) -> PriceData:
@@ -95,7 +95,7 @@ def fetch_bitget_price_data(symbol: str) -> PriceData:
     raise SymbolNotFound(f'Symbol {symbol} not found in Bitget exchange')
 
 
-def fetch_okx_price_data(*, symbol: str) -> PriceData:
+def fetch_okx_price_data(symbol: str) -> PriceData:
     '''
     Fetch the price data of a cryptocurrency from OKX exchange
     
